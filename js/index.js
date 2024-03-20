@@ -1,29 +1,26 @@
-// get the biggest number of 3 numbers
+const demo = document.getElementById('demo');
+const ulContainer = document.getElementById('ulContainer');
+console.log(demo.getAttribute('id'));
 
-const getBiggestNumber = (a, b, c) => {
-  if (a > b && a > c) {
-    return `${a} is bigger than ${b} and ${c}`;
-  } else if (b > a && b > c) {
-    return `${b} is bigger than ${a} and ${c}`;
-  } else {
-    return `${c} is bigger than ${a} and ${b}`;
-  }
-};
+demo.setAttribute('class', 'test');
+console.log(demo.className ? 'yes' : 'no');
 
-console.log(getBiggestNumber(1, 2, 3));
+console.log(demo.parentNode);
 
-// get the tallest height
+const li = document.createElement('li');
+const li1 = document.createElement('li');
+const li2 = document.createElement('li');
+const li3 = document.createElement('li');
+li.innerText = 'list nr 1';
+li1.innerText = 'list nr 2';
+li2.innerText = 'list nr 3';
+li3.innerText = 'list nr 4';
 
-const heights = [32, 73, 7, 87, 65, 29, 64];
+ulContainer.append(li, li1, li2, li3);
 
-const getTallestHeight = (heights) => {
-  let tallest = 0;
-  for (const height of heights) {
-    if (height > tallest) {
-      tallest = height;
-    }
-  }
-  return tallest;
-};
+const allClasses = document.querySelectorAll('.cl1');
+const singleClass = document.querySelector('p.cl1:first-child');
+console.log(allClasses);
 
-console.log(getTallestHeight(heights));
+const firstParagraph = document.querySelector('p.cl1');
+console.log(firstParagraph.innerText);
