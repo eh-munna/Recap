@@ -1,14 +1,3 @@
-function convertToNumber(id) {
-  elementField = document.querySelector(id);
-  elementFieldValue = parseFloat(elementField.value);
-  return elementFieldValue;
-}
-
-const clearInput = (id) => {
-  elementField = document.querySelector(id);
-  elementField.value = '';
-};
-
 function calculateTriangle() {
   const triangleBaseValue = convertToNumber('#triangleBase');
   const triangleHeightValue = convertToNumber('#triangleHeight');
@@ -25,3 +14,5 @@ function calculateRectangle() {
   clearInput('#rectangleLength');
   return console.log(area);
 }
+
+setRandomBG();
