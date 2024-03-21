@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f8f8f8;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #999999;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-inline: 0.75rem;
+}
+
+.color-primary {
+  color: #00bcd4;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.py-1 {
+  padding-block: 0.25rem;
+}
+.py-2 {
+  padding-block: 0.5rem;
+}
+.py-3 {
+  padding-block: 0.75rem;
+}
+.py-4 {
+  padding-block: 1rem;
+}
+.px-1 {
+  padding-inline: 0.25rem;
+}
+.px-2 {
+  padding-inline: 0.5rem;
+}
+.px-3 {
+  padding-inline: 0.75rem;
+}
+.px-4 {
+  padding-inline: 1rem;
+}
+
+.icon-custom {
+  font-size: 2rem;
+  color: #00bcd4;
+}
+
+nav {
+  background-color: #ebebeb !important;
+}
+
+.nav-item {
+  list-style: none !important;
+  padding: 25px;
+}
+.nav-item a {
+  color: #999999;
+}
+a {
+  text-decoration: none;
+}
+
+#btnAppointment {
+  border: 0;
+  background-color: #00bcd4;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#btnAppointment a {
+  color: white;
+}
