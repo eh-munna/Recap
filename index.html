@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,8 @@
     <main
       class="bg-[#010313] min-h-screen bg-[url('/images/background.png')] bg-no-repeat bg-center"
     >
-      <section class="hidden">
+      <!-- home screen -->
+      <section id="homeScreen" class="">
         <div
           class="flex flex-col justify-center items-center min-h-screen space-y-3"
         >
@@ -26,26 +27,112 @@
           <p class="text-white text-xl text-center">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button class="rounded-lg px-3 py-2 text-center bg-white text-black">
+          <button
+            onclick="play()"
+            class="rounded-lg px-3 py-2 text-center bg-white text-black"
+          >
             Play Now
           </button>
         </div>
       </section>
-      <section class="">
+      <!-- play ground -->
+      <section id="playGround" class="hidden">
         <div class="flex flex-col justify-center items-center space-y-3">
           <!-- screen -->
-          <div
-            class="artboard artboard-horizontal phone-6 border rounded-lg mt-8"
-          >
-            1024×320
+          <div class="text-[#010313] text-center">
+            <div
+              class="artboard artboard-horizontal phone-6 border-[15px] border-[#010313CC] rounded-lg mt-[90px] bg-[#FFFFFFB3]"
+            >
+              <div class="flex justify-center text-[white]">
+                <p class="bg-[#2F2941] rounded-b-lg px-4 py-3">
+                  Don't watch keyboard while playing...
+                </p>
+              </div>
+              <div
+                class="flex flex-col h-2/3 justify-center items-center overflow-hidden"
+              >
+                <p id="currentAlphabet" class="text-5xl uppercase">Y</p>
+              </div>
+            </div>
           </div>
           <!-- keyboard -->
+          <div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="q" class="kbd">q</kbd>
+              <kbd id="w" class="kbd">w</kbd>
+              <kbd id="e" class="kbd">e</kbd>
+              <kbd id="r" class="kbd">r</kbd>
+              <kbd id="t" class="kbd">t</kbd>
+              <kbd id="y" class="kbd">y</kbd>
+              <kbd id="u" class="kbd">u</kbd>
+              <kbd id="i" class="kbd">i</kbd>
+              <kbd id="o" class="kbd">o</kbd>
+              <kbd id="p" class="kbd">p</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="a" class="kbd">a</kbd>
+              <kbd id="s" class="kbd">s</kbd>
+              <kbd id="d" class="kbd">d</kbd>
+              <kbd id="f" class="kbd">f</kbd>
+              <kbd id="g" class="kbd">g</kbd>
+              <kbd id="h" class="kbd">h</kbd>
+              <kbd id="j" class="kbd">j</kbd>
+              <kbd id="k" class="kbd">k</kbd>
+              <kbd id="l" class="kbd">l</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="z" class="kbd">z</kbd>
+              <kbd id="x" class="kbd">x</kbd>
+              <kbd id="c" class="kbd">c</kbd>
+              <kbd id="v" class="kbd">v</kbd>
+              <kbd id="b" class="kbd">b</kbd>
+              <kbd id="n" class="kbd">n</kbd>
+              <kbd id="m" class="kbd">m</kbd>
+              <kbd id="/" class="kbd">/</kbd>
+            </div>
+          </div>
           <!-- game updates -->
+          <div class="flex justify-between w-2/3">
+            <button
+              class="inline-flex justify-center items-center bg-[#894189] rounded-[30px] px-6 py-2 gap-2 text-white"
+            >
+              Life
+              <span><img src="images/heart.svg" alt="" /></span
+              ><span id="updateLife"></span>
+            </button>
+            <button
+              class="inline-flex justify-center items-center bg-[#360490] rounded-[30px] px-6 py-2 gap-2 text-white"
+            >
+              Score <span><img src="images/dollar.svg" alt="" /></span
+              ><span id="updateScore"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- score board -->
+      <section id="scoreBoard" class="hidden">
+        <div
+          class="flex flex-col justify-center items-center min-h-screen space-y-3"
+        >
+          <h1 class="uppercase font-anton text-white text-5xl text-center">
+            Score : <span id="totalScore"></span>
+          </h1>
+          <button
+            onclick="play()"
+            class="rounded-lg px-3 py-2 text-center bg-white text-black"
+          >
+            Play Again
+          </button>
+          <p class="text-white text-xl text-center">
+            Practice will make you Pro
+          </p>
         </div>
       </section>
     </main>
     <main class="container mx-auto px-12"></main>
-    <script src="js/utility.js"></script>
-    <script src="js/index.js"></script>
+    <!-- <script src="js/utility.js"></script>
+    <script src="js/index.js"></script> -->
+    <script src="js/utility2.js"></script>
+    <script src="js/index2.js"></script>
   </body>
 </html>
