@@ -18,3 +18,19 @@ body {
 .text-center {
   text-align: center;
 }
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#userContainer {
+  margin-block: 30px;
+}
+
+.border1 {
+  border: 1px solid #fafafa;
+}
