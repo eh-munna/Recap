@@ -1,4 +1,4 @@
-import Device from './components/Device';
+import Users from './components/Users';
 
 export default function App() {
   return (
@@ -9,7 +9,9 @@ export default function App() {
         </h1>
       </header>
       <main className="container mx-auto px-4 py-3">
-        <Device />
+        {/* <Device /> */}
+        {/* <Handlers /> */}
+        <Users />
       </main>
     </>
   );
