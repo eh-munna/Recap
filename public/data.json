@@ -1,0 +1,72 @@
+[
+  {
+    "id": 121,
+    "name": "Sparkling Water",
+    "brand": "Aquafina",
+    "volume_ml": 500,
+    "price_usd": 1.99
+  },
+  {
+    "id": 122,
+    "name": "Purified Water",
+    "brand": "Dasani",
+    "volume_ml": 1000,
+    "price_usd": 2.49
+  },
+  {
+    "id": 123,
+    "name": "Spring Water",
+    "brand": "Fiji",
+    "volume_ml": 750,
+    "price_usd": 3.99
+  },
+  {
+    "id": 124,
+    "name": "Flavored Water",
+    "brand": "Hint",
+    "volume_ml": 400,
+    "price_usd": 2.99
+  },
+  {
+    "id": 125,
+    "name": "Mineral Water",
+    "brand": "Evian",
+    "volume_ml": 1000,
+    "price_usd": 4.49
+  },
+  {
+    "id": 126,
+    "name": "Coconut Water",
+    "brand": "Vita Coco",
+    "volume_ml": 500,
+    "price_usd": 3.29
+  },
+  {
+    "id": 127,
+    "name": "Alkaline Water",
+    "brand": "Essentia",
+    "volume_ml": 1500,
+    "price_usd": 5.99
+  },
+  {
+    "id": 128,
+    "name": "Carbonated Water",
+    "brand": "Perrier",
+    "volume_ml": 750,
+    "price_usd": 4.99
+  },
+  {
+    "id": 129,
+    "name": "Electrolyte Water",
+    "brand": "Smartwater",
+    "volume_ml": 600,
+    "price_usd": 3.79
+  },
+  {
+    "id": 130,
+    "name": "Artesian Water",
+    "brand": "FIJI",
+    "volume_ml": 1200,
+    "price_usd": 6.49
+  }
+]
