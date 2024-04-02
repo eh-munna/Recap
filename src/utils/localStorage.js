@@ -6,21 +6,23 @@ export const getStoredItem = () => {
   return [];
 };
 
-export const setStoredItem = (ids) => {
-  localStorage.setItem('cart', JSON.stringify(ids));
+export const setStoredItem = (items) => {
+  localStorage.setItem('cart', JSON.stringify(items));
 };
 
-export const removeFromStorage = (item) => {
-  const storedItem = getStoredItem();
-  const index = storedItem.indexOf(item);
-  if (index !== -1) {
-    storedItem.splice(index, 1);
-    setStoredItem(storedItem);
+export const removeFromStorage = (itemId) => {
+  const storedItems = getStoredItem();
+  const updatedItems = storedItems.filter((item) => item.id !== itemId);
+  setStoredItem(updatedItems);
+};
+
+export const addToStorage = (id, quantity = 1) => {
+  const storedItems = getStoredItem();
+  const existingItemIndex = storedItems.findIndex((item) => item.id === id);
+  if (existingItemIndex !== -1) {
+    storedItems[existingItemIndex].quantity += quantity;
+  } else {
+    storedItems.push({ id, quantity });
   }
-};
-
-export const addToStorage = (id, quantity) => {
-  const storedItem = getStoredItem();
-  storedItem.push({ id: id, quantity: quantity });
-  setStoredItem(storedItem);
+  setStoredItem(storedItems);
 };
