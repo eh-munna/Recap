@@ -1,12 +1,3 @@
-// export const removeFromLocalStorage = (item) => {
-//   const storedItem = getStoredItem();
-//   const index = storedItem.indexOf(item);
-//   if (index !== -1) {
-//     storedItem.splice(index, 1);
-//     setStoredItem(storedItem);
-//   }
-// };
-
 export const getStoredItem = () => {
   const storedItem = localStorage.getItem('cart');
   if (storedItem) {
@@ -28,8 +19,8 @@ export const removeFromStorage = (item) => {
   }
 };
 
-export const addToStorage = (id) => {
+export const addToStorage = (id, quantity) => {
   const storedItem = getStoredItem();
-  storedItem.push(id);
+  storedItem.push({ id: id, quantity: quantity });
   setStoredItem(storedItem);
 };

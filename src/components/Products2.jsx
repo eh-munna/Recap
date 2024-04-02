@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react';
-import {
-  addToStorage,
-  getStoredItem,
-  removeFromStorage,
-} from '../utils/localStorage';
-import Cart from './Cart';
+import { getStoredItem } from '../utils/localStorage';
+import Cart2 from './Cart2';
 import Product from './Product';
 
-export default function Products() {
+export default function Products2() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
@@ -30,23 +26,29 @@ export default function Products() {
   }, [products]);
 
   const handleAddToCart = (product) => {
-    setCart([...cart, product]);
-    addToStorage(product.id);
+    const exist = cart.find((p) => p.id === product.id);
+    if (exist) {
+      const updatedCart = cart.map((product) => {
+        if (product.id === exist.id) {
+          return {
+            ...product,
+            quantity: product.quantity + 1,
+          };
+        }
+        return product;
+      });
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+
+    // addToStorage(product.id, product.quantity);
   };
 
-  //   const handleRemoveFromCart = (productId, index) => {
-  //     const newCart = cart.filter((_, idx) => idx !== index);
-  //     setCart(newCart);
-  //     removeFromStorage(productId);
-  //   };
-
-  const handleRemoveFromCart = (id) => {
-    const index = cart.findIndex((product) => product.id === id);
-    if (index !== -1) {
-      const updatedCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
-      setCart(updatedCart);
-    }
-    removeFromStorage(id);
+  const handleRemoveFromCart = (productId) => {
+    const newCart = cart.filter((item) => item.id !== productId);
+    setCart(newCart);
+    // removeFromStorage(productId);
   };
 
   return (
@@ -62,7 +64,7 @@ export default function Products() {
           ))}
         </div>
         <div className="col-span-1 space-y-3">
-          <Cart cart={cart} onRemove={handleRemoveFromCart} />
+          <Cart2 cart={cart} onRemove={handleRemoveFromCart} />
         </div>
       </div>
     </>

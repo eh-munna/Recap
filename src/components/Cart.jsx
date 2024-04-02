@@ -7,10 +7,10 @@ export default function Cart({ cart, onRemove }) {
         <p>Quantity: {cart.length}</p>
       </div>
       <ul className="">
-        {cart.map((product) => (
+        {cart.map((product, index) => (
           <li
             className="flex gap-3 justify-between items-center mt-1"
-            key={product.id}
+            key={product.id + '' + index}
           >
             {product.name}{' '}
             <button

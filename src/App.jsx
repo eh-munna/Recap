@@ -1,4 +1,4 @@
-import Products from './components/Products';
+import Products2 from './components/Products2';
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
         </h1>
       </header>
       <main className="container mx-auto px-4 py-3">
-        <Products />
+        <Products2 />
       </main>
     </>
   );
