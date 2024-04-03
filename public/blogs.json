@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "blog_title": "Understanding Asynchronous JavaScript",
+    "tags": ["JavaScript", "Asynchronous", "Programming"],
+    "author_name": "John Doe",
+    "author_image": "https://i.ibb.co/9GCQCYP/user-1.jpg",
+    "blog_cover": "https://i.ibb.co/mRR6rQ5/book-1.jpg",
+    "reading_time": 10,
+    "posted_date": "2024-04-01"
+  },
+  {
+    "id": "2",
+    "blog_title": "Introduction to ES6 Features",
+    "tags": ["JavaScript", "ES6", "Programming"],
+    "author_name": "Jane Smith",
+    "author_image": "https://i.ibb.co/tMgTsbM/user-2.jpg",
+    "blog_cover": "https://i.ibb.co/gzvdLnr/book-3.jpg",
+    "reading_time": 8,
+    "posted_date": "2024-03-28"
+  },
+  {
+    "id": "3",
+    "blog_title": "Mastering Promises in JavaScript",
+    "tags": ["JavaScript", "Promises", "Programming"],
+    "author_name": "Mike Johnson",
+    "author_image": "https://i.ibb.co/7bMQFLQ/user-3.jpg",
+    "blog_cover": "https://i.ibb.co/zGPTvbL/book-4.jpg",
+    "reading_time": 12,
+    "posted_date": "2024-03-15"
+  },
+  {
+    "id": "4",
+    "blog_title": "A Beginner's Guide to React.js",
+    "tags": ["JavaScript", "React.js", "Frontend Development"],
+    "author_name": "Emily Brown",
+    "author_image": "https://i.ibb.co/G73gZZy/user-4.jpg",
+    "blog_cover": "https://i.ibb.co/grbb9cv/class-3.jpg",
+    "reading_time": 15,
+    "posted_date": "2024-03-10"
+  },
+  {
+    "id": "5",
+    "blog_title": "Understanding Closures in JavaScript",
+    "tags": ["JavaScript", "Closures", "Programming"],
+    "author_name": "Alex Wilson",
+    "author_image": "https://i.ibb.co/PN4XSkt/user-5.jpg",
+    "blog_cover": "https://i.ibb.co/bRNFbcc/class-1.jpg",
+    "reading_time": 9,
+    "posted_date": "2024-02-25"
+  },
+  {
+    "id": "6",
+    "blog_title": "Building a RESTful API with Node.js",
+    "tags": ["JavaScript", "Node.js", "Backend Development"],
+    "author_name": "Chris Taylor",
+    "author_image": "https://i.ibb.co/8dYkyvj/user-6.jpg",
+    "blog_cover": "https://i.ibb.co/gzvdLnr/book-3.jpg",
+    "reading_time": 20,
+    "posted_date": "2024-02-10"
+  }
+]
