@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { FaRegBookmark } from 'react-icons/fa';
-export default function Blog({ blog, onRead }) {
+import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
+export default function Blog({ blog, onBookmarked, onRead }) {
   const {
     id,
     blog_title,
@@ -11,6 +11,7 @@ export default function Blog({ blog, onRead }) {
     reading_time,
     posted_date,
     tags,
+    isBooked,
   } = blog;
 
   let oldDate = new Date(posted_date);
@@ -40,8 +41,11 @@ export default function Blog({ blog, onRead }) {
         {/* time */}
         <ul className="flex justify-center items-center gap-3">
           <li>{reading_time} mins to read</li>
-          <li className="cursor-pointer">
-            <FaRegBookmark />
+          <li
+            onClick={() => onBookmarked(blog, id, reading_time)}
+            className="cursor-pointer"
+          >
+            {!isBooked ? <FaRegBookmark /> : <FaBookmark />}
           </li>
         </ul>
       </div>
@@ -55,6 +59,7 @@ export default function Blog({ blog, onRead }) {
               className="border border-indigo-200 px-2 py-1 rounded-md bg-sky-600 text-white"
               key={tag}
             >
+              <span>#</span>
               {tag}
             </li>
           ))}
@@ -62,7 +67,7 @@ export default function Blog({ blog, onRead }) {
       </div>
       {/*  */}
       <button
-        onClick={() => onRead(blog, id)}
+        onClick={() => onRead(reading_time, id)}
         className="my-3 px-2 py-1 rounded-md border border-indigo-300"
       >
         Mark as read
