@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useHeading } from '../../hooks/useHeading';
-import FeaturedJobs from './Jobs/FeaturedJobs';
+import FeaturedJobs from '../Jobs/FeaturedJobs';
 
 export default function Home() {
   const heading = useHeading(`Welcome To The Career Hub!`);

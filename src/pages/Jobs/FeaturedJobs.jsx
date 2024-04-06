@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHeading } from '../../../hooks/useHeading';
+import { useHeading } from '../../hooks/useHeading';
 import Job from './Job';
 
 export default function FeaturedJobs({ jobs }) {
