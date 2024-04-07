@@ -3,19 +3,16 @@ import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 export default function Register() {
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.password.value;
     createUser(email, password)
-      .then((res) => {
-        const newUser = res.user;
-        setUser(newUser);
-      })
+      .then(() => {})
       .catch((err) => {
-        if (err.code == 'auth/email-already-in-use') {
+        if (err.code === 'auth/email-already-in-use') {
           alert('The email address is already in use');
           return;
         }

@@ -3,12 +3,23 @@ import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 export default function Navbar() {
-  const { user } = useContext(AuthContext);
+  const { user, signOutUser } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {})
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <nav className="container mx-auto px-4 py-3 border border-sky-300 rounded-md flex items-center">
       <ul className="flex gap-3 items-center flex-grow">
         <li>
           <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/orders">Orders</NavLink>
         </li>
         {!user && (
           <>
@@ -31,6 +42,7 @@ export default function Navbar() {
             </li>
             <li>
               <button
+                onClick={handleSignOut}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
               >
