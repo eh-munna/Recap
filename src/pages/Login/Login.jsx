@@ -17,7 +17,7 @@ export default function Login() {
       .catch((err) => {
         if (err.code === 'auth/invalid-credential') {
           alert('The email address is invalid');
-          //   return;
+          return;
           // } else if (err.code === 'auth/user-disabled') {
           //   alert('The user account has been disabled');
           //   return;
