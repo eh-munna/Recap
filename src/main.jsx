@@ -7,7 +7,9 @@ import AddCoffee from './components/AddCoffee.jsx';
 import './index.css';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import AuthProvider from './Providers/AuthProvider.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
+import User from './components/User.jsx';
 import ViewCoffee from './components/ViewCoffee.jsx';
 
 const router = createBrowserRouter([
@@ -31,11 +33,17 @@ const router = createBrowserRouter([
     loader: ({ params: { id } }) =>
       fetch(`http://localhost:3000/view-coffee/${id}`),
   },
+  {
+    path: '/user',
+    element: <User />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
     <ToastContainer />
   </React.StrictMode>
 );

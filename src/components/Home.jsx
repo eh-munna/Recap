@@ -4,8 +4,6 @@ import Coffee from './Coffee';
 
 export default function Home() {
   const [coffees, setCoffee] = useState([]);
-  console.log(coffees);
-
   const handleDelete = (_id) => {
     const deleteConfirm = confirm('Are you sure you want to delete');
     if (deleteConfirm) {
