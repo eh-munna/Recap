@@ -1,6 +1,6 @@
 import Form from './Form';
 
-export default function User() {
+export default function SignIn() {
   return (
     <>
       <Form />

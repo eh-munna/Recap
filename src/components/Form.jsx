@@ -1,16 +1,21 @@
 import { useContext } from 'react';
+import { Zoom, toast } from 'react-toastify';
 import { AuthContext } from '../Providers/AuthProvider';
 
 export default function Form() {
-  const { setUser, user, createUser } = useContext(AuthContext);
+  const { user, createUser } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     createUser(email, password)
       .then((userCredential) => {
-        const newUser = userCredential.user;
+        const newUser = {
+          name,
+          email: userCredential?.user?.email,
+        };
         (async () => {
           const response = await fetch(`http://localhost:3000/users`, {
             method: 'POST',
@@ -18,14 +23,36 @@ export default function Form() {
             body: JSON.stringify(newUser),
           });
           const data = await response.json();
-          console.log(data);
+          if (data.insertedId) {
+            toast.success('User is created!', {
+              position: 'top-right',
+              autoClose: 1500,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
+              transition: Zoom,
+            });
+          }
         })();
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
+        if (errorMessage) {
+          toast.error(`${errorMessage}`, {
+            position: 'top-right',
+            autoClose: 1500,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+            transition: Zoom,
+          });
+        }
       });
   };
 
@@ -43,9 +70,16 @@ export default function Form() {
     >
       <input
         className="p-1 rounded-sm focus:outline-none focus:placeholder:text-green-500 focus:text-sky-500"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="name"
+      />
+      <input
+        className="p-1 rounded-sm focus:outline-none focus:placeholder:text-green-500 focus:text-sky-500"
         type="email"
         name="email"
-        id="name"
+        id="email"
         placeholder="email"
       />
       <input

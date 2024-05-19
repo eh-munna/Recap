@@ -8,8 +8,10 @@ import './index.css';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AuthProvider from './Providers/AuthProvider.jsx';
+import SignIn from './components/SignIn.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
-import User from './components/User.jsx';
+import UpdateUser from './components/UpdateUser.jsx';
+import Users from './components/Users.jsx';
 import ViewCoffee from './components/ViewCoffee.jsx';
 
 const router = createBrowserRouter([
@@ -34,8 +36,19 @@ const router = createBrowserRouter([
       fetch(`http://localhost:3000/view-coffee/${id}`),
   },
   {
-    path: '/user',
-    element: <User />,
+    path: '/sign-in',
+    element: <SignIn />,
+  },
+  {
+    path: '/users',
+    element: <Users />,
+    loader: () => fetch(`http://localhost:3000/users`),
+  },
+  {
+    path: `/update-users/:id`,
+    element: <UpdateUser />,
+    loader: ({ params: { id } }) =>
+      fetch(`http://localhost:3000/update-users/${id}`),
   },
 ]);
 
