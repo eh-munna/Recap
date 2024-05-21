@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useContext } from 'react';
 import { Zoom, toast } from 'react-toastify';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -16,13 +17,34 @@ export default function Form() {
           name,
           email: userCredential?.user?.email,
         };
+        // (async () => {
+        //   const response = await fetch(`http://localhost:3000/users`, {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(newUser),
+        //   });
+        //   const data = await response.json();
+        // if (data.insertedId) {
+        //   toast.success('User is created!', {
+        //     position: 'top-right',
+        //     autoClose: 1500,
+        //     hideProgressBar: true,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        //     theme: 'light',
+        //     transition: Zoom,
+        //   });
+        // }
+        // })();
+
         (async () => {
-          const response = await fetch(`http://localhost:3000/users`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newUser),
-          });
-          const data = await response.json();
+          const response = await axios.post(
+            `http://localhost:3000/users`,
+            newUser
+          );
+          const data = await response.data;
           if (data.insertedId) {
             toast.success('User is created!', {
               position: 'top-right',
