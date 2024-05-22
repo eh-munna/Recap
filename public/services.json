@@ -1,0 +1,200 @@
+[
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c1a",
+    "title": "Basic Car Wash",
+    "description": "Includes exterior hand wash, tire shine, and interior vacuum.",
+    "price": 19.99,
+    "duration": "30 minutes",
+    "image": "https://example.com/images/basic_car_wash.jpg",
+    "categories": ["Wash", "Basic"],
+    "rating": 4.5,
+    "reviews": [
+      {
+        "user": "John Doe",
+        "comment": "Great service, my car looks brand new!",
+        "rating": 5
+      },
+      {
+        "user": "Jane Smith",
+        "comment": "Quick and efficient!",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c1b",
+    "title": "Premium Car Wash",
+    "description": "Includes exterior hand wash, tire shine, interior vacuum, and wax.",
+    "price": 39.99,
+    "duration": "1 hour",
+    "image": "https://example.com/images/premium_car_wash.jpg",
+    "categories": ["Wash", "Premium"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "user": "Alice Johnson",
+        "comment": "Excellent service, highly recommend!",
+        "rating": 5
+      },
+      {
+        "user": "Bob Brown",
+        "comment": "Worth the price for the quality of work.",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c1c",
+    "title": "Full Service Detail",
+    "description": "Complete interior and exterior detail including engine cleaning and waxing.",
+    "price": 99.99,
+    "duration": "3 hours",
+    "image": "https://example.com/images/full_service_detail.jpg",
+    "categories": ["Detailing"],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "user": "Charlie Davis",
+        "comment": "My car has never looked better!",
+        "rating": 5
+      },
+      {
+        "user": "Dana Evans",
+        "comment": "Thorough and professional service.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c1d",
+    "title": "Interior Detailing",
+    "description": "Detailed cleaning of seats, carpets, and dashboard.",
+    "price": 59.99,
+    "duration": "2 hours",
+    "image": "https://example.com/images/interior_detailing.jpg",
+    "categories": ["Detailing", "Interior"],
+    "rating": 4.7,
+    "reviews": [
+      {
+        "user": "Emily White",
+        "comment": "The interior of my car looks spotless!",
+        "rating": 5
+      },
+      {
+        "user": "Frank Black",
+        "comment": "Good service but a bit pricey.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c1e",
+    "title": "Exterior Detailing",
+    "description": "Complete exterior detail including polishing and waxing.",
+    "price": 79.99,
+    "duration": "2.5 hours",
+    "image": "https://example.com/images/exterior_detailing.jpg",
+    "categories": ["Detailing", "Exterior"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "user": "Grace Green",
+        "comment": "My car's exterior looks shiny and new.",
+        "rating": 5
+      },
+      {
+        "user": "Henry Brown",
+        "comment": "Very thorough and professional.",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c1f",
+    "title": "Engine Cleaning",
+    "description": "Deep cleaning of the engine bay to remove grease and grime.",
+    "price": 49.99,
+    "duration": "1.5 hours",
+    "image": "https://example.com/images/engine_cleaning.jpg",
+    "categories": ["Detailing", "Engine"],
+    "rating": 4.6,
+    "reviews": [
+      {
+        "user": "Isabella Blue",
+        "comment": "Engine looks like new after the cleaning.",
+        "rating": 5
+      },
+      {
+        "user": "Jack Yellow",
+        "comment": "Good service but took longer than expected.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c20",
+    "title": "Wheel and Tire Detailing",
+    "description": "Cleaning and shining of wheels and tires.",
+    "price": 29.99,
+    "duration": "45 minutes",
+    "image": "https://example.com/images/wheel_tire_detailing.jpg",
+    "categories": ["Detailing", "Wheels"],
+    "rating": 4.7,
+    "reviews": [
+      {
+        "user": "Kate Pink",
+        "comment": "Wheels look amazing after the detailing.",
+        "rating": 5
+      },
+      {
+        "user": "Leo Orange",
+        "comment": "Great attention to detail.",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c21",
+    "title": "Headlight Restoration",
+    "description": "Restoration of cloudy and yellowed headlights.",
+    "price": 39.99,
+    "duration": "1 hour",
+    "image": "https://example.com/images/headlight_restoration.jpg",
+    "categories": ["Restoration"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "user": "Mia Purple",
+        "comment": "Headlights look brand new.",
+        "rating": 5
+      },
+      {
+        "user": "Noah Grey",
+        "comment": "Great service, highly recommended.",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "_id": "60b8d5c4f1a4c30f8c8d1c22",
+    "title": "Paint Correction",
+    "description": "Removal of light scratches and swirl marks from paint.",
+    "price": 149.99,
+    "duration": "4 hours",
+    "image": "https://example.com/images/paint_correction.jpg",
+    "categories": ["Restoration"],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "user": "Olivia Black",
+        "comment": "My car's paint looks flawless after the correction.",
+        "rating": 5
+      },
+      {
+        "user": "Paul White",
+        "comment": "Expensive but worth it for the results.",
+        "rating": 4.5
+      }
+    ]
+  }
+]
