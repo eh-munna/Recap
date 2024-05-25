@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Service({ service }) {
   const { _id, title, description, price, categories, rating } = service;
 
@@ -29,9 +31,11 @@ export default function Service({ service }) {
             ))}
           </p>
 
-          <button className="border border-green-500 p-1 rounded-md">
-            Book Now
-          </button>
+          <Link to={`/checkout/${_id}`}>
+            <button className="border border-green-500 p-1 rounded-md">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </>

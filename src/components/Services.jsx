@@ -6,7 +6,7 @@ export default function Services() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch('/services.json');
+      const response = await fetch('http://localhost:3000/services');
       const data = await response.json();
       setServices(data);
     })();
