@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 
@@ -9,8 +10,15 @@ export default function Bookings() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(url);
-      const data = await response.json();
+      // const response = await fetch(url, {
+      //   withCredentials: true,
+      // });
+      // const data = await response.json();
+      // setBookings(data);
+      const response = await axios.get(url, {
+        withCredentials: true,
+      });
+      const { data } = await response;
       setBookings(data);
     })();
   }, [url]);

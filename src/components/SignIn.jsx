@@ -1,8 +1,12 @@
+import axios from 'axios';
 import { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 
 export default function SignIn() {
   const { signInUser } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,7 +19,20 @@ export default function SignIn() {
         const newUser = {
           email: userEmail,
         };
-        console.log(newUser);
+
+        (async () => {
+          const response = await axios.post(
+            'http://localhost:3000/jwt',
+            newUser,
+            {
+              withCredentials: true,
+            }
+          );
+          const { data } = await response;
+          if (data.success) {
+            navigate(location.state?.from || '/');
+          }
+        })();
       })
       .catch((error) => {
         const errorMessage = error.message;
