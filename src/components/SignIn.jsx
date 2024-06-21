@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -20,19 +19,20 @@ export default function SignIn() {
           email: userEmail,
         };
 
-        (async () => {
-          const response = await axios.post(
-            'http://localhost:3000/jwt',
-            newUser,
-            {
-              withCredentials: true,
-            }
-          );
-          const { data } = await response;
-          if (data.success) {
-            navigate(location.state?.from || '/');
-          }
-        })();
+        // (async () => {
+        //   const response = await axios.post(
+        //     'http://localhost:3000/jwt',
+        //     newUser,
+        //     {
+        //       withCredentials: true,
+        //     }
+        //   );
+        //   const { data } = await response;
+        //   if (data.success) {
+        //     navigate(location.state?.from || '/');
+        //   }
+        // })();
+        navigate(location.state?.from || '/');
       })
       .catch((error) => {
         const errorMessage = error.message;

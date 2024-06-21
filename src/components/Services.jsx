@@ -1,16 +1,8 @@
-import { useEffect, useState } from 'react';
 import Service from './Service';
+import useServices from './hooks/useServices';
 
 export default function Services() {
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const response = await fetch('http://localhost:3000/services');
-      const data = await response.json();
-      setServices(data);
-    })();
-  }, []);
+  const services = useServices();
 
   return (
     <>

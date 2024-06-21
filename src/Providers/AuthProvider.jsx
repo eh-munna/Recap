@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -31,11 +32,30 @@ export default function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      const userEmail = { email: currentUser?.email || user?.email };
       setUser(currentUser);
       setLoading(false);
+      if (currentUser) {
+        (async () => {
+          const response = await axios.post(
+            'http://localhost:3000/jwt',
+            userEmail,
+            { withCredentials: true }
+          );
+          const { data } = await response;
+          console.log(data);
+          // localStorage.setItem('userToken', JSON.stringify(data.token));
+        })();
+      } else {
+        axios
+          .post('http://localhost:3000/logout', userEmail, {
+            withCredentials: true,
+          })
+          .then((res) => console.log(res.data));
+      }
     });
     return () => unsubscribe();
-  }, [auth]);
+  }, [auth, user?.email]);
 
   const authInfo = {
     user,
