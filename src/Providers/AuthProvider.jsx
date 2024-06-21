@@ -35,7 +35,7 @@ export default function AuthProvider({ children }) {
       setLoading(false);
     });
     return () => unsubscribe();
-  }, []);
+  }, [auth]);
 
   const authInfo = {
     user,
