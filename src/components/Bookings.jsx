@@ -12,18 +12,25 @@ export default function Bookings() {
 
   useEffect(() => {
     (async () => {
+      // ? normal fetch API
+
       // const response = await fetch(url, {
       //   withCredentials: true,
       // });
       // const data = await response.json();
       // setBookings(data);
+
+      // * axios API
+
       // const response = await axios.get(url, {
       //   withCredentials: true,
       // });
       // const { data } = await response;
       // setBookings(data);
 
-      const response = await useAxiosSecure.get(url);
+      // * axiosSecure API
+
+      const response = await axiosSecure.get(url);
       const { data } = await response;
       setBookings(data);
     })();

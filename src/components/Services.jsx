@@ -1,5 +1,5 @@
+import useServices from '../hooks/useServices';
 import Service from './Service';
-import useServices from './hooks/useServices';
 
 export default function Services() {
   const services = useServices();
