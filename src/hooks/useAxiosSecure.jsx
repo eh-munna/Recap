@@ -22,7 +22,7 @@ export default function useAxiosSecure() {
           logOut()
             .then(() => {
               // Sign-out successful.
-              navigate('/');
+              navigate('/sign-in');
             })
             .catch((error) => {
               // An error happened.
