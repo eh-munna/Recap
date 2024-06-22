@@ -1,10 +1,17 @@
-export default function App() {
+import { useState } from 'react'
+import './App.css'
+import Header from './components/Header/Header'
+import Shop from './components/Shop/Shop'
+
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <>
-      <header>
-        <h1 className="text-3xl font-bold text-center px-4 py-3">Hello!</h1>
-      </header>
-      <main className="container mx-auto px-4 py-3"></main>
-    </>
-  );
+    <div className="App">
+      <Header></Header>
+      <Shop></Shop>
+    </div>
+  )
 }
+
+export default App
